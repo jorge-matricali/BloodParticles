@@ -28,6 +28,7 @@ import org.bukkit.entity.Wither;
 import org.bukkit.entity.Wolf;
 import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -76,201 +77,226 @@ public class BloodBase extends JavaPlugin implements Listener{
 		plugin.saveConfig();
 	}
 	
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void HumanBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Player) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Human");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void BlazeBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Blaze) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Blaze");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void EndermanBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Enderman) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Enderman");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void SquidBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Squid) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Squid");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void ZombieBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 		if (e.getEntity() instanceof Zombie) {
 			int blood = plugin.getConfig().getInt("Mobs.Zombie");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void SlimeBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 		if (e.getEntity() instanceof Slime) {
 			int blood = plugin.getConfig().getInt("Mobs.Slime");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void SpiderBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 		if (e.getEntity() instanceof Spider) {
 			int blood = plugin.getConfig().getInt("Mobs.Spider");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void GolemBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 		if (e.getEntity() instanceof Golem) {
 			int blood = plugin.getConfig().getInt("Mobs.Golem");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void CowBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Cow) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Cow");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void BatBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Bat) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Bat");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void ChickenBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 		if (e.getEntity() instanceof Chicken) {
 			int blood = plugin.getConfig().getInt("Mobs.Chicken");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void OcelotBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Ocelot) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Ocelot");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void HorseBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Horse) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Horse");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void SheepBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Sheep) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Sheep");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void PigBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Pig) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Pig");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void VillagerBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Villager) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Villager");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void WolfBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Wolf) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Wolf");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void CreeperBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Creeper) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Creeper");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void GhastBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Ghast) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Ghast");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void MagmaCubeBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof MagmaCube) {
 	    	int blood = plugin.getConfig().getInt("Mobs.MagmaCube");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void SkeletonBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Skeleton) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Skeleton");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void SilverfishBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Silverfish) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Silverfish");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void WitchBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof Witch) {
 	    	int blood = plugin.getConfig().getInt("Mobs.Witch");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void EnderDragonBlood(EntityDamageByEntityEvent e){
+            if(e.isCancelled()) return;
 	    if (e.getEntity() instanceof EnderDragon) {
 	    	int blood = plugin.getConfig().getInt("Mobs.EnderDragon");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.MONITOR)
 	public void WitherBlood(EntityDamageByEntityEvent e){
 	    if (e.getEntity() instanceof Wither) {
+                if(e.isCancelled()) return;
 	    	int blood = plugin.getConfig().getInt("Mobs.Wither");
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation().add(0, 1, 0), Effect.STEP_SOUND, blood);
 	    }
